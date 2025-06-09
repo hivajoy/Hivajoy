@@ -925,7 +925,7 @@ function openLink(url) {
                 font-size: 14px;
             }
 
-            Iframe {
+            iframe {
                 max-width: 100%;
                 height: auto;
                 min-height: 250px;
@@ -941,7 +941,7 @@ function openLink(url) {
     <input type="text" id="teraboxLink" placeholder="Enter Terabox link">
     <button onclick="playLink()">Play</button>
 </div>
-    <div id="iframeContainer" style="display: none;">
+    <div id="iframeContainer" style="display: none;overflow:hidden;">
         <iframe id="linkIframe" src="" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
