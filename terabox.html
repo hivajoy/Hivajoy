@@ -1,0 +1,138 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terabox Link Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+         h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+         .input-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+         #teraboxLink {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            margin: 20px 0;
+            border: 0px solid #555;
+            outline: none;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #222;
+            color: #fff;
+        }
+        button {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: rgb(255, 140, 0);
+            border: 0px;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e74c3c;
+            box-shadow: 0 0 10px rgba(255, 87, 51, 0.7);
+        }
+        iframe {
+            margin-top: 20px;
+            width: 100%;
+            height: 600px;
+            
+        }
+        .containerrr {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            background-color: #111;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .containerrr {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            #teraboxLink {
+                max-width: 100%;
+                font-size: 14px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            Iframe {
+                max-width: 100%;
+                height: auto;
+                min-height: 250px;
+                overflow:hidden;
+            }
+        }
+    </style>
+
+
+<div class="containerrr">
+    <h2>Terabox Link Player</h2>
+    <div class="input-container">
+    <input type="text" id="teraboxLink" placeholder="Enter Terabox link">
+    <button onclick="playLink()">Play</button>
+</div>
+    <div id="iframeContainer" style="display: none;">
+        <iframe id="linkIframe" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+    <script>
+        function playLink() {
+            var link = document.getElementById("teraboxLink").value;
+            if (link) {
+                // Construct the new URL
+                var newUrl = `/api/terabox.html?url=${encodeURIComponent(link)}`;
+                
+                // Set the iframe's src attribute to the new URL
+                var iframe = document.getElementById("linkIframe");
+                iframe.src = newUrl;
+                
+                
+                // Show the iframe container
+                document.getElementById("iframeContainer").style.display = "block";
+
+                 fetch('/assets/php/save_link.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'teraboxLink=' + encodeURIComponent(link)
+                })
+                .catch(error => console.error('Error:', error));
+            
+            } else {
+                alert("Please enter a valid Terabox link.");
+            }
+        }
+    </script>
+
+</body>
+</html>
