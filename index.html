@@ -1,23 +1,20 @@
-
-
-
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-
-
+<meta name="description" content="Hivajoy is an online ad free movie streaming and downloader for free. With hivajoy cloud or Drive, you can watch and download over 80 million movies, series, Tv-Show  and more for FREE." />
+ 
+<meta name="google-site-verification" content="ZWvcq9PubKLiW9bLX2hKTaQcem6lRTHxr1rZGSF7L7s" />
     
-<title>Movies - Hivajoy</title>
-
+<title>Hivajoy - Watch Movies, Web Series, Tv Show Online in HD Quality </title>
 
 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet" />
-<link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzZ-JW4TU-6FVt9B2oKlk2vwJ3KlO47eHgUhpGqzwDPPTEIwNU0MUO3qnm0dxMjKBnKkXff5Or17G027qOjJGjA9r0vyp62bZqY8hf0NYY7VtCfSouFjSZXeMwwalZbaFO-80XyNoSZS2dmUXp8u0iDt2qgyg3DSoHz7SE7zWU1a5fP54nKHeMWpZ4yKVC/s320/IMG_20240410_151054-removebg-preview.png' rel='shortcut icon'/>
+<link href='/assets/img/hivajoy.png' rel='shortcut icon'/>
 
 <style>
 body , html{
@@ -39,6 +36,7 @@ user-select: none;
 
 <style>
 .container {
+    justify-content:center;
     border:0px solid orange;
     border-radius: 5px;
     overflow: hidden;
@@ -51,10 +49,11 @@ user-select: none;
 }
     .carousel-item img {
     width: 100%;
+    max-width:700px;
     min-height:240px;
     max-height:500px !important;
     padding: 0;
-    margin: 0;
+    margin: 0px auto;
 }
 
 
@@ -86,14 +85,6 @@ user-select: none;
 .zoomable-img:hover {
   transform: scale(1.1);
 }
-
-.movie a {
-  transition: transform 0.1s;
-}
-
-.movie a:hover {
-  transform: scale(1.1);
-}
       
 body::-webkit-scrollbar {
     display: none;
@@ -114,6 +105,9 @@ body::-webkit-scrollbar {
             width: 100%;
             overflow: hidden; /* Ensure the buttons don&#39;t scroll */
         }
+        .image-slider-container-wrapper::-webkit-scrollbar {
+    display: none;
+}
         .image-slider-contain {
             display: flex;
             overflow-x: auto;
@@ -121,8 +115,9 @@ body::-webkit-scrollbar {
             height: 240px;
             padding-top: 10px;
             padding-left:8px;
-            scroll-behavior: smooth;
             margin-left:5px;
+            scroll-behavior: smooth;
+            
         }
     .image-slider-contain img {
       display: inline-block;
@@ -160,7 +155,7 @@ body::-webkit-scrollbar {
         }
 
 .header-btn {
-    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    background: rgba(220, 220, 220, 0.3); /* Semi-transparent white */
     color: white; /* Button text color for contrast */
     border: none; 
     border-radius: 20px; /* Border color, matching semi-transparent white */
@@ -169,11 +164,12 @@ body::-webkit-scrollbar {
     font-weight:bold;
     cursor: pointer;
     transition: background 0.3s, border-color 0.3s;
-    margin-right:10px;
+    margin-right:7px;
     outline: none;
 }
 
 .header-btn:hover {
+    color: white;
     background: rgba(255, 255, 255, 0.6); /* Less transparent white on hover */
     border-color: rgba(255, 255, 255, 0.8);
 }
@@ -323,6 +319,7 @@ body::-webkit-scrollbar {
     }
 
     .search-input {
+        
         width: 100vw;
         padding: 5px 10px;
         border: 1px solid #ccc;
@@ -341,26 +338,32 @@ body::-webkit-scrollbar {
 @media (min-width: 768px) {
     .search-container {
         position: fixed;
-        top: 10px;
+        top:8px;
         right: 105px;
         display: flex;
         align-items: center;
+        color:white;
     }
 
     .search-icon {
         position: absolute;
-        color:black;
-        right: 130px;
+        color:white;
+        right: 140px;
         cursor: pointer;
-        font-size: 20px;
-        z-index: 999;
+        font-size: 16px;
+        z-index: 998;
     }
 
     .search-input {
-        padding: 3px 10px;
+        color:white;
+        background-color: rgba(200, 200, 200, 0.2);
+
+
+        font-weight:bold;
+        padding: 7px 25px;
         width: 500px;
-        border: 1px solid #ccc;
-        border-radius:5px;
+        border: 0px solid #ccc;
+        border-radius:20px;
         font-size: 14px;
         outline: none;
     }
@@ -373,65 +376,10 @@ body::-webkit-scrollbar {
     .main-content {
         background :black;
         margin-left:250px;
-        padding:0px 10px;
+        padding:0px 0px;
 
     }
-
-     
 }
-
-.movie-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-        }
-        .movie {
-            border-radius:5px;
-           
-            max-width: 160px;
-            text-align: center;
-            margin-bottom:40px;
-        }
-        .movie a {
-            text-decoration: none;
-            display: block;
-            position: relative;
-        }
-        .movie img {
-            border-radius:5px;
-            height: 240px;
-            width: 160px;
-            display: block;
-            max-width: 100%;
-        }
-        .movie-name {
-            display: block;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            hyphens: auto;
-            font-weight: bold;
-            color: white;
-            margin-top: 5px;
-            font-size: 14px;
-            text-align: center;
-            white-space: normal;
-            max-width: 100%;
-            line-height: 1.1;
-        }
-        .hdrip {
-            background:red;
-            color: white;
-            padding:4px 12px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            position: absolute;
-            top: 10px;
-            left: 0px;
-            font-size: 12px;
-            z-index: 1;
-        }
-
 </style>
     <style>
     .bookmark-container {
@@ -562,28 +510,9 @@ body::-webkit-scrollbar {
     .bookmark-div li .remove-btn:hover {
         text-decoration: underline;
     }
-
-  .pagination a {
-    margin: 0 5px;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #333;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-}
-
-.pagination a.active {
-    background-color: #333;
-    color: white;
-}
-
-.pagination span {
-    margin: 0 5px;
-    padding: 5px 10px;
-    color: white;
-}
-
-
+    .menu-list:hover {
+        background:#454545;
+    }
 </style>
 <script>
  function toggleMenu() {
@@ -632,9 +561,8 @@ function openLink(url) {
         <i style="color:white;" class="fa-solid fa-xmark"></i>
     </span>            <!-- Menu Header -->
             <div style="display: flex; align-items: center; top: 0; position: relative; width: 100%; height: 50px; background-color: black;">
-                <img src="/IMG_20250608_185851.jpg" style="position:relative;width: 32px; height: 32px; margin: 8px;left:20px;"/>
-              
-                <img src="/IMG_20250608_190702.jpg" style="position:relative;width: 110px; height: 38px; margin: 8px;left:10px;"/>
+                <img src='https://hivajoy.vercel.app/IMG_20250608_185851.jpg' style='width: 32px; height: 28px; position: relative; cursor: pointer;margin-bottom:8px;margin-left:20px;'/>
+            <img src="https://hivajoy.vercel.app/IMG_20250608_190702.jpg" style="position:relative;width: 110px; height: 38px; margin: 8px;left:0px;"/>
             </div>
         
             <!-- Menu Content -->
@@ -646,7 +574,7 @@ function openLink(url) {
 
 
             <div onmouseover="this.style.backgroundColor='#454545';"
-        onmouseout="this.style.backgroundColor='#252525';" style='display: flex; align-items: center;top:0px;border:0px solid orange; border-radius:0px; position: relative; width: 250px; height:auto;  z-index: 999; 0px;padding:12px;padding-left:22px;margin-top:10px;font-weight:bold;' id="status" class="status">Checking login status...</div>
+        onmouseout="this.style.backgroundColor='#252525';" style='display: flex; align-items: center;top:0px;border:0px solid orange; border-radius:0px; position: relative; width: 250px; height:auto;  z-index: 999; 0px;padding:12px;padding-left:22px;margin-top:10px;font-weight:bold;' id="status" class="status"><i class="fas fa-sign-in-alt login-icon"></i> <a style="margin-left:10px;text-decoration:none;color:rgb(255, 140, 0);" href="/login.php">log in </a>&nbsp; to use features.</div>
 
     <script>
         // Function to check login status
@@ -752,12 +680,35 @@ function openLink(url) {
     
         <!--Header Menu Content End-->
         <div class='menu-icon' onclick='toggleMenu()'>
-            <span style='color: rgb(255, 140, 0); font-size:24px;margin-right:10px;font- weight:bold;'><b><i class="fa-solid fa-bars"></i></b></span>
+          <style>
+.grid-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+  margin-right: 5px;
+}
+.grid-icon div {
+  background: rgb(255, 140, 0);
+  width: 9px;
+  height: 9px;
+  border-radius:2px;
+  
+}
+</style>
+
+<div class="grid-icon">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
         </div>
 
        
-        <img src='/IMG_20250608_185851.jpg' style='width: 32px; height: 32px; position: relative; cursor: pointer;margin-left:0px;'/>
-            <img src="/IMG_20250608_190702.jpg" style="position:relative;width: 110px; height: 38px; margin: 8px;left:0px;"/>
+        <img src='https://hivajoy.vercel.app/IMG_20250608_185851.jpg' style='width: 30px; height: 26px; position: relative; cursor: pointer;margin-bottom:8px;'/>
+            <img src="https://hivajoy.vercel.app/IMG_20250608_190702.jpg" style="position:relative;width: 110px; height: 38px; margin: 8px;"/>
             
 
 <!-- Search Icon -->
@@ -766,9 +717,9 @@ function openLink(url) {
 </span>
 
 <!-- Search Container -->
-<form id="results" action="/search.php" method="get">
+<form id="results" action="https://hivajoy.fwh.is/stream" method="get">
     <div class="search-container">
-        <input type="text" name="query" id="query" class="search-input" placeholder="Movies, Shows and more">
+        <input type="text" name="q" id="query" class="search-input" placeholder="Movies, Shows and more">
     </div>
 </form>
 
@@ -877,26 +828,229 @@ function openLink(url) {
 
 
 
-<div class="image-slider-container" style="border:0px; border-radius:0px; background:black; width:100%; padding-bottom:6px;height:auto;font-weight:bold; color:white;font-size:14px;z-index:998;position:fixed;padding-top:3px;">
+<div class="image-slider-container" style="border:0px; border-radius:0px; background:black; width:100%; padding-bottom:6px;height:auto;font-weight:bold; color:white;font-size:14px;z-index:998;position:fixed;padding-top:3px;padding-left:10px;">
 
-<button class="header-btn" style="background:white;color:black;" ">Latest</button>
-    
-    <button class="header-btn" onclick="openLink('/search.php?query=adventure')">Adventure</button>
-    <button class="header-btn"  onclick="openLink('/search.php?query=action')">Action</button>
-    <button class="header-btn"  onclick="openLink('/search.php?query=drama')">Drama</button>
-    <button class="header-btn"  onclick="openLink('/search.php?query=comedy')">Comedy</button>
-    <button class="header-btn" onclick="openLink('/search.php?query=thriller')">Thriller/Suspense</button>
-    <button class="header-btn"  onclick="openLink('/search.php?query=horror')">Horror</button>
-    <button class="header-btn" onclick="openLink('/search.php?query=romantic')">Romantic Comedy</button>
-    <button class="header-btn"  onclick="openLink('/search.php?query=historical')">Historical</button>
+<button class="header-btn" style="background:white;color:black;" onclick="openLink('/')">Home</button>
+</div>
+
+
+  <!--Sliding Wrappe-->
+  <br/><br/>
+  <div style="padding:2px 5px;">
+
+<div class="container">
+    <div class="content text-center">
+        <div class="row content-section">
+            <div class="col-sm-12 col-md-12">
+                <div id="myCarousel" class="carousel slide w-100" data-ride="carousel" data-interval="3000">
+                    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <!-- Add more carousel indicators for additional images -->
+</ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+    <a onclick="openLink('')">
+        <img class="d-block w-100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHLFT1RQ0h4OQ00O3mwnTozeJPAj-jUWkdUKgIB1h5ffnMdTBi_L2Ed_Rv3U_MCEo_tcUVeuxUQ3JjY4X7bYGDuQeLWq6w8ft7HbI9ai9fnJ52jW5DrbO9V3OwgHIq36ANYATIuZSPfY6jy-dsY3QeZikznX98TLqJ16S5kKVqhJZJYldLuphb2NDv2UQ/s1600/Youtube-Premium-Mob.jpg" alt="The Army of the Dead">
+        <div class="carousel-caption" >
+            <div class="carousel-item-content text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8" style="background-color: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 10px;width:100%;">
+                     
+                        <button class="header-btn" style="font-size: 16px; color: white; background-color: rgba(255, 69, 0, 0.9); border: none; padding: 6px 10px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 69, 0, 0.9)'; this.style.transform='scale(1)';">DOWNLOAD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
 </div>
 
 
 
+                        <div class="carousel-item">
+                          
+                      <a  onclick="openLink('/')" >
+                            
+                            <img class="d-block w-100" src="https://i.ytimg.com/vi/7JoQDdzFB7E/maxresdefault.jpg">
+                   
+                          
+                        <div class="carousel-caption" >
+            <div class="carousel-item-content text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8" style="background-color: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 10px;width:100%;">
+                        
+                        <button class="header-btn" style="font-size: 16px; color: white; background-color: rgba(255, 69, 0, 0.9); border: none; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 69, 0, 0.9)'; this.style.transform='scale(1)';">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div></a>
+                          
+                          </div>
+                          
+<div class="carousel-item">
+        <!-- Second image -->
+       <a  onclick="openLink('')" >
+         <img class="d-block w-100" src="https://i.ytimg.com/vi/7JoQDdzFB7E/maxresdefault.jpg" alt="Third slide">
+  
+  <div class="carousel-caption" >
+            <div class="carousel-item-content text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8" style="background-color: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 10px;width:100%;">
+                        <h2 style="font-size: 18px; color: #fff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);"></h2>
+                        <p style="font-size: 14px; color: #fff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></p>
+                        <button class="header-btn" style="font-size: 16px; color: white; background-color: rgba(255, 69, 0, 0.9); border: none; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 69, 0, 0.9)'; this.style.transform='scale(1)';">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div></a>
+    </div>  
+
+                          
+                          
+<!-- Coustom Added-->
+  <div class="carousel-item">
+  <a onclick="openLink('')">
+        <img class="d-block w-100" src="https://i.ytimg.com/vi/7JoQDdzFB7E/maxresdefault.jpg" alt="The Army of the Dead">
+        <div class="carousel-caption" >
+            <div class="carousel-item-content text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8" style="background-color: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 10px;width:100%;">
+                        <h2 style="font-size: 18px; color: #fff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);"></h2>
+                        <p style="font-size: 14px; color: #fff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></p>
+                        <button class="header-btn" style="font-size: 16px; color: white; background-color: rgba(255, 69, 0, 0.9); border: none; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 69, 0, 0.9)'; this.style.transform='scale(1)';">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+                            </div>
+                      
+                      
+<div class="carousel-item">
+            <a  onclick="openLink('')" >
+                            
+                            <img class="d-block w-100" src="https://i.ytimg.com/vi/7JoQDdzFB7E/maxresdefault.jpg">
+                   
+                          
+                        <div class="carousel-caption" >
+            <div class="carousel-item-content text-center">
+                <div class="row justify-content-center">
+                    <div class="col-md-8" style="background-color: rgba(0, 0, 0, 0.3); padding: 10px; border-radius: 10px;width:100%;">
+                        <h2 style="font-size: 18px; color: #fff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);"></h2>
+                        <p style="font-size: 14px; color: #fff; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></p>
+                        <button class="header-btn" style="font-size: 16px; color: white; background-color: rgba(255, 69, 0, 0.9); border: none; padding: 10px 20px; border-radius: 50px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: background-color 0.3s ease, transform 0.3s ease;" onmouseover="this.style.backgroundColor='#ff5722'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='rgba(255, 69, 0, 0.9)'; this.style.transform='scale(1)';">Watch Now</button>
+                    </div>
+                </div>
+            </div>
+        </div></a>                    </div>
+
+                                            
+                                        
+                        <!-- Add more carousel items here -->
+                    
+                                      
+                                    
+                                      
+                                        
+                      
+                      
+                    </div>
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+                                             </div>
+    
+
+<!-- Bootstrap and jQuery JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript for carousel initialization -->
+<script>
+$(document).ready(function(){
+    $('.carousel').carousel();
+});
+</script>
+<!-- Sliding Wrappe End-->
 
 
+ <style>
+        .premium-banner {
+            background: darkorange;
+            background-size: cover, 5%;
+            color: #000;
+            text-align: center;
+            padding: 5px;
+            font-family: Arial, sans-serif;
+            border-radius:20px;
+            font-weight: bold;
+            border-top: 5px solid #000;
+            border-bottom: 5px solid #000;
+            position: relative;
+            overflow: hidden;
+        } 
+
+        .premium-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100%;
+            background: linear-gradient(to left, #000, transparent);
+        }
+
+        .premium-banner p {
+            margin: 0;
+            font-size: 12px;
+            z-index: 1;
+        }
+    </style>
 
 
+    <div class="premium-banner">
+        <p>If we blocked just remember <span style="color:white;">"Hivajoy.free.nf"</span></p>
+        <p style="font-weight: normal;">Enjoy content without interruptions!</p>
+    </div>
+
+                                              
+
+  
+  
+  <!--Widget 1 [ Live TV ]-->
+  
+<b style="color: white;font-size:21px;padding: 5px 10px;font-weight:bold;">Featured</b>
+  
+ 
+  <div id="latest" class="image-slider-container" style="height:auto; border-radius:10px; background:none; width:100%; padding:10px 0; padding-left:10px; display:flex; align-items:center; gap:10px; overflow-x:auto;">
+
+  <!-- Second Slide -->
+  <a class="zoomable-img" onclick="openLink('p/terabox/player')" style="position: relative; display: inline-block;cursor: pointer;">
+    <img style="border: 0px solid white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 200px; height: 130px; margin-right: 10px; transition: all 0.3s ease;" src="https://i.ytimg.com/vi/7JoQDdzFB7E/maxresdefault.jpg" alt="TeraBox Play">
+  </a>
+
+  <!-- Third Slide (Live Tag) -->
+  <a class="zoomable-img" onclick="openLink('/tv')" style="position: relative; display: inline-block;cursor: pointer;">
+    <span style="background: green; color: white; padding: 2px 8px; border-radius: 20px; position: absolute; top: 10px; left: 10px; font-size: 12px; z-index: 1; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+      <span style="color: yellow; font-size: 12px;">🔴 </span><b>FREE</b>
+    </span>
+    <img style="border: 0px solid white; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 10px; width: 200px; height: 130px; transition: all 0.3s ease;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHLFT1RQ0h4OQ00O3mwnTozeJPAj-jUWkdUKgIB1h5ffnMdTBi_L2Ed_Rv3U_MCEo_tcUVeuxUQ3JjY4X7bYGDuQeLWq6w8ft7HbI9ai9fnJ52jW5DrbO9V3OwgHIq36ANYATIuZSPfY6jy-dsY3QeZikznX98TLqJ16S5kKVqhJZJYldLuphb2NDv2UQ/s1600/Youtube-Premium-Mob.jpg" alt="Hivajoy TV">
+  </a>
+
+</div>
 
 
     
